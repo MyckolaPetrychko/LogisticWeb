@@ -14,6 +14,7 @@ var operation_component_1 = require('./../operation/operation.component');
 var filter_component_1 = require('./../filter/filter.component');
 var maintable_component_1 = require('./../maintable/maintable.component');
 var aditionaltable_component_1 = require('./../aditionaltable/aditionaltable.component');
+var railway_service_1 = require('../../shared/railway.service');
 var Logistic = (function () {
     function Logistic() {
     }
@@ -22,7 +23,8 @@ var Logistic = (function () {
             selector: 'logistic',
             templateUrl: './app/components/application/app.component.html',
             styleUrls: ['./app/components/application/app.component.css'],
-            directives: [menu_component_1.MenuComponent, operation_component_1.OperationComponent, filter_component_1.FilterComponent, maintable_component_1.MainTable, aditionaltable_component_1.AditionalTable]
+            directives: [menu_component_1.MenuComponent, operation_component_1.OperationComponent, filter_component_1.FilterComponent, maintable_component_1.MainTable, aditionaltable_component_1.AditionalTable],
+            providers: [railway_service_1.railwayService]
         }), 
         __metadata('design:paramtypes', [])
     ], Logistic);

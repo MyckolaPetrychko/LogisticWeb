@@ -9,20 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var railcar_list_component_1 = require('../railcar-list/railcar-list.component');
-var MainTable = (function () {
-    function MainTable() {
+var railway_model_1 = require('../../shared/railway.model');
+var RailCarItem = (function () {
+    function RailCarItem() {
     }
-    MainTable = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', railway_model_1.RailWay)
+    ], RailCarItem.prototype, "railcar", void 0);
+    RailCarItem = __decorate([
         core_1.Component({
-            selector: 'all-carload',
-            templateUrl: './app/components/maintable/maintable.component.html',
-            styleUrls: ['./app/components/maintable/maintable.component.css'],
-            directives: [railcar_list_component_1.RailCarList]
+            selector: 'railcar-item',
+            templateUrl: './app/components/railcar-item/railcar-item.component.html',
+            styleUrls: ['./app/components/railcar-item/railcar-item.component.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], MainTable);
-    return MainTable;
+    ], RailCarItem);
+    return RailCarItem;
 }());
-exports.MainTable = MainTable;
-//# sourceMappingURL=maintable.component.js.map
+exports.RailCarItem = RailCarItem;
+//# sourceMappingURL=railcar-item.component.js.map

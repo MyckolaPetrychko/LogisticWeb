@@ -1,0 +1,69 @@
+<div class = "table-responsive">
+         <table class = "table table-hover table-bordered">
+                <thead>
+                        <tr>
+                                <th>Владелец</th>
+                                <th>Поставщик</th>
+                                <th>Номер вагона</th>
+                                <th>Номер накладной</th>
+                                <th>Дата отгрузки</th>
+                                <th>Экспедитор</th>
+                                <th>Станция</th>
+                                <th>Культура</th>
+                                <th>Наличие ГМО</th>
+                                <th>Сертификат качества</th>
+                                <th>Дата внесения сертификата качества</th>
+                                <th>Протокол безопасности</th>
+                                <th>Брутто по накладной, кг</th>
+                                <th>Тара по накладной, кг</th>
+                                <th>Разрешение на выгрузку</th>
+                                <th>Нетто по накладной</th>
+                                <th >Взвешивание по брутто</th>
+                                <th>Обнаружение несоответствия на ИЗТ (дата, время)</th>
+                                <th>Взвешивание по таре</th>
+                                <th>Брутто на ИЗТ, кг</th>
+                                <th>Тара на ИЗТ, кг</th>
+                                <th>Нетто на ИЗТ, кг</th>
+                                <th>Разница по бруто, кг</th>
+                                <th>Разница по нетто, кг</th>   
+                                <th>Способ определения веса при отгрузке</th>   
+                                <th>Причина задержки выгрузки вагона</th>   
+                                <th>Разрешение на выгрузку</th>  
+                                <th>Дополнительные маневровые роботы, ч</th>
+                        </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let railcar of railcars">  
+                        <td>{{ railcar.owner }}</td>
+                        <td>{{ railcar.furnisher }}</td>
+                        <td>{{ railcar.carloadNumber }}</td>
+                        <td>{{ railcar.numberInvoice }}</td>
+                        <td>{{ railcar.dateExtractInvoice }}</td>
+                        <td>{{ railcar.sender }}</td>
+                        <td>{{ railcar.stationSender }}</td>
+                        <td>{{ railcar.nameCulture }}</td>
+                        <td>{{ railcar.gmo }}</td>
+                        <td>{{ railcar.certificate }}</td>
+                        <td>{{ railcar.certificatedate }}</td>
+                        <td>{{ railcar.securityProtocol }}</td>
+                        <td>{{ railcar.weightBrruttoInvoice }}</td>
+                        <td>{{ railcar.weightTareInvoice }}</td>
+                        <td>{{ railcar.permisionResult }}</td>
+                        <td>{{ railcar.weightNetInvoice }}</td>
+                        <td>{{ railcar.brruttoTime }}</td>
+                        <td>{{ railcar.uncorrespondeseTime }}</td>
+                        <td>{{ railcar.tareTime }}</td>
+                        <td>{{ railcar.brutoIZT }}</td>
+                        <td>{{ railcar.netIZT }}</td>
+                        <td>{{ railcar.tareIZT }}</td>
+                        <td>{{ railcar.brutoDifference }}</td>
+                        <td>{{ railcar.netDifference }}</td>
+                        <td>{{ railcar.meansWeight }}</td>
+                        <td>{{ railcar.permisionTime }} / {{ railcar.permisionName }}</td>
+                        <td>{{ railcar.permisionResult }}</td>
+                        <td>{{ railcar.overTime }}</td>
+                    </tr>
+                </tbody>
+         </table>
+ </div>
+  
